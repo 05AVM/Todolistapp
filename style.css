@@ -1,0 +1,173 @@
+/* This CSS properties are appplicable to all HTML ELements*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff45f0;
+    color: #fff;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 100px;
+
+}
+h2{
+    font-size: 40px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-display: flex;
+    color:#153677
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container:hover{
+    border: none;
+    border-radius: 40px;
+    transform: scale(1.1);
+    transition:perspective();
+    background-color: #1d2b2b;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height:28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image:url(images/unchecked.png);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image:url(images/checked.png);
+
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #f4f1f1;
+    line-height: 40px;
+    text-align: center;
+
+}
+ul li span:hover{
+   background:#333232
+
+}
+
+
+
+
+
+
+
+
+
+/* 
+1....
+
+In CSS, the "vh" unit stands for viewport height. It is a relative unit of measurement 
+that represents a percentage of the height of 
+the viewport, which is the visible portion
+ of the browser window.
+ The viewport height is divided into 100 equal units, and 1 vh is equal to 1% of the viewport height. 
+ For example, if the viewport height is 800 pixels, 1 vh would be equivalent to 8 pixels.
+ 
+ 
+ 2.... 
+ 
+ Cursor - pointer , means when we 
+ take the mouse the hand symbol showss.
+
+
+ 3.... 
+
+ Position property is used to specify the postiioning behaviour of an elemnt in an webpage.
+static (default): Elements are positioned according to their default position in the document flow. This is the default behavior, and elements with position: static are not affected by the top, bottom, left, right, or z-index properties.
+relative: Elements are positioned relative to their normal position in the document flow. 
+You can use the top, bottom, left, and right properties to adjust the element's position relative to its normal position.
+
+absolute: Elements are positioned relative to their nearest positioned ancestor 
+(an ancestor with a position other than static) or the initial containing block if no positioned ancestor is found. 
+The top, bottom, left, and right properties can be used to position the element.
+
+fixed: Elements are positioned relative to the browser window and do not move even if the page is scrolled. 
+Like absolute, you can use the top, bottom, left, and right properties to control the position of the element.
+
+sticky: Elements are positioned based on the user's scroll position. 
+It acts like a mix of relative and fixed positioning. 
+The element is positioned relative to its normal position until it reaches a specified threshold, 
+at which point it becomes "sticky" and starts behaving like fixed.
+ 
+4.... 
+
+ul li.checked::before is called a pseudo-element selector. More specifically, it is selecting the ::
+before pseudo-element of list items (li) 
+that have the class checked within an unordered list (ul).
+
+Pseudo-elements are used to style a specific part of an element, in this case, 
+the content that is inserted before the content of each list item. By using the ::before pseudo-element, 
+you can add additional content or decorative elements before the actual content of the list item.
+
+
+
+
+
+*/
